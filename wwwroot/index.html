@@ -1,0 +1,287 @@
+<!doctype html>
+<html class="no-js" lang="zxx">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Catalina & Nicolás</title>
+    <meta name="author" content="">
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <meta name="robots" content="INDEX,FOLLOW">
+
+    <!-- Mobile Specific Metas -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!--==============================
+	   Google Web Fonts
+	============================== -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Old+Standard+TT&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Parisienne&display=swap" rel="stylesheet">
+
+
+    <!-- Favicons - Place favicon.ico in the root directory -->
+    <link rel="shortcut icon" href="assets/img/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="assets/img/favicon.ico" type="image/x-icon">
+
+    <!--==============================
+	    All CSS File
+	============================== -->
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <!-- <link rel="stylesheet" href="assets/css/app.min.css"> -->
+    <!-- Fontawesome Icon -->
+    <link rel="stylesheet" href="assets/css/fontawesome.min.css">
+    <!-- Layerslider -->
+    <link rel="stylesheet" href="assets/css/layerslider.min.css">
+    <!-- jQuery DatePicker -->
+    <link rel="stylesheet" href="assets/css/jquery.datetimepicker.min.css">
+    <!-- Magnific Popup -->
+    <link rel="stylesheet" href="assets/css/magnific-popup.min.css">
+    <!-- Slick Slider -->
+    <link rel="stylesheet" href="assets/css/slick.min.css">
+    <!-- Animate CSS -->
+    <link rel="stylesheet" href="assets/css/animate.min.css">
+    <!-- Theme Custom CSS -->
+    <link rel="stylesheet" href="assets/css/style.css">
+
+    <style>
+        .contenedor{
+            position: relative;
+            display: inline-block;
+            width: 100%;
+        }
+         
+        
+        .centrado{
+            position: absolute;
+            top: 45%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        .final{
+            position: absolute;
+            top: 95%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+        .formulRespuesta{
+            position: absolute;
+            top: 60%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+        .invitados{
+            position: absolute;
+            top: 15%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        .formulRespuesta h2{
+            font-family: 'Parisienne', cursive;
+        }
+
+        .formulRespuesta label, textarea{
+            font-family: 'Parisienne', cursive;
+            color: #000;
+            font-weight: bold;
+            
+        }
+
+        .btn-mapa{
+            background-color: #82AD82;
+            color: #fff;
+        }
+
+        .btn-mapa:hover{
+            background-color: #AD8682;
+            color: white;
+        }
+        </style>
+
+</head>
+
+<body class="home-five">
+
+    <audio id="player" autoplay loop>
+        <source src="perfect.mp3" type="audio/mp3">
+        <source src="perfect.ogg" type="audio/ogg">
+    </audio>
+    <!--[if lte IE 9]>
+    	<p class="browserupgrade">Estás utilizando un navegador <strong>desactualizado</strong> Actualice su navegador para mejorar su experiencia y seguridad.</p>
+  <![endif]-->
+
+    <!--==============================
+     Preloader
+  ==============================-->
+    <div class="preloader  ">
+        <button class="vs-btn preloaderCls">Cancelar carga </button>
+        <div class="preloader-inner">
+            <!-- <svg width="88px" height="108px" viewBox="0 0 54 64">
+                <defs></defs>
+                <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                    <path class="beat-loader" d="M0.5,38.5 L16,38.5 L19,25.5 L24.5,57.5 L31.5,7.5 L37.5,46.5 L43,38.5 L53.5,38.5" id="Path-2" stroke-width="2"></path>
+                </g>
+            </svg> -->
+
+            <img src="heart.svg" vwidth="88px" height="108px" class="svg-icon" />
+            <!-- <svg class="svg-icon" vwidth="88px" height="108px" viewBox="0 0 54 64">
+                <defs></defs>
+                <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                    <path class="beat-loader" d="M9.719,17.073l-6.562-6.51c-0.27-0.268-0.504-0.567-0.696-0.888C1.385,7.89,1.67,5.613,3.155,4.14c0.864-0.856,2.012-1.329,3.233-1.329c1.924,0,3.115,1.12,3.612,1.752c0.499-0.634,1.689-1.752,3.612-1.752c1.221,0,2.369,0.472,3.233,1.329c1.484,1.473,1.771,3.75,0.693,5.537c-0.19,0.32-0.425,0.618-0.695,0.887l-6.562,6.51C10.125,17.229,9.875,17.229,9.719,17.073 M6.388,3.61C5.379,3.61,4.431,4,3.717,4.707C2.495,5.92,2.259,7.794,3.145,9.265c0.158,0.265,0.351,0.51,0.574,0.731L10,16.228l6.281-6.232c0.224-0.221,0.416-0.466,0.573-0.729c0.887-1.472,0.651-3.346-0.571-4.56C15.57,4,14.621,3.61,13.612,3.61c-1.43,0-2.639,0.786-3.268,1.863c-0.154,0.264-0.536,0.264-0.69,0C9.029,4.397,7.82,3.61,6.388,3.61" id="Path-2" stroke-width="2"></path>
+                </g>
+                
+            </svg> -->
+        </div>
+    </div>
+    <!--==============================
+      Hero Area
+    ==============================-->
+    <img src="img/inicio.svg" width="100%">
+    <img src="img/noscasamos.svg" width="100%">
+    <section class="hero-layout5 vs-hero-wrapper position-relative" style="padding-top: -40%;">
+        <div class="vs-hero-carousel" data-height="1080" data-container="1900" data-slidertype="responsive" data-maxratio="3" style="padding-top: -50%;">
+            <!-- Slide 1-->
+            <div class="ls-slide" data-ls="duration:3000; transition2d:5; kenburnsscale:1.2;">
+                <img width="1920" height="1080" src="5.png" class="ls-bg" alt="bg-image">
+                <div style="font-size:36px; color:#000; text-align:left; font-style:normal; text-decoration:none; text-transform:none; font-weight:400; letter-spacing:0px; background-position:0% 0%; background-repeat:no-repeat; top:585px; left:1713px;" class="ls-l ls-hide-tablet ls-hide-phone ls-html-layer" data-ls="static:forever;">
+                    <button data-change-slide="next" class="ls-arrow2 ls-custom-arrow"><i class="far fa-long-arrow-down"></i></button>
+                </div>
+                <div style="font-size:36px; color:#000; text-align:left; font-style:normal; text-decoration:none; text-transform:none; font-weight:400; letter-spacing:0px; background-position:0% 0%; background-repeat:no-repeat; top:267px; left:1713px;" class="ls-l ls-hide-tablet ls-hide-phone ls-html-layer" data-ls="static:forever;">
+                    <button data-change-slide="prev" class="ls-arrow2 ls-custom-arrow"><i class="far fa-long-arrow-up"></i></button>
+                </div>
+                <div style="font-size:36px; color:#000; text-align:left; font-style:normal; text-decoration:none; text-transform:none; font-weight:400; letter-spacing:0px; background-position:0% 0%; background-repeat:no-repeat; top:375px; left:1736px; line-height:0px;" class="ls-l ls-hide-tablet ls-hide-phone ls-html-layer" data-ls="static:forever;"><a href="#" class="ls-custom-dot vertical"></a><a href="#" class="ls-custom-dot vertical"></a><a href="#" class="ls-custom-dot vertical"></a></div>
+            </div>
+
+            <!-- Slide 2-->
+            <div class="ls-slide" data-ls="duration:3000; transition2d:5; kenburnsscale:1.2;">
+                <img width="1920" height="1080" src="2.png" class="ls-bg" alt="hero bg">
+            </div>
+
+            <!-- Slide 3-->
+            <div class="ls-slide" data-ls="duration:3000; transition2d:5; kenburnsscale:1.2;">
+                <img width="1920" height="1080" src="3.jpg" class="ls-bg" alt="background">
+            </div>
+        </div>
+    </section>
+    
+    <!--==============================
+    Service Area
+    ==============================-->
+    <section>
+        <!-- <img src="img/4.svg" style="text-align: center;" width="100%"> -->
+
+        <div class="contenedor">
+            <img src="img/lugares.svg" style="text-align: center;" width="100%">
+            <div class="centrado">
+                <button class="btn btn-mapa" onclick="window.open('https://maps.app.goo.gl/yZCPp1hhnzaPSf46A')"><i class="fas fa-map-marker-alt"></i> VER MAPA</button>
+            </div>
+            <div class="final">
+                <button class="btn btn-mapa" onclick="window.open('https://maps.app.goo.gl/uhygQGj9ohTLwFuV9')"><i class="fas fa-map-marker-alt"></i> VER MAPA</button>
+            </div>
+        </div>
+
+        <div class="rectangulo">
+            <p>NUESTRO MAYOR REGALO ES CONTAR CON TU PRESENCIA, PERO SI DESEAS HACERNOS UN OBSEQUIO, ESTAS SON NUESTRAS SUGERENCIAS:</p>
+        </div>
+            
+        <img src="img/dresscode.svg" style="text-align: center;" width="100%">
+        <div class="rectangulo">
+            <p>NUESTRO MAYOR REGALO ES CONTAR CON TU PRESENCIA, PERO SI DESEAS HACERNOS UN OBSEQUIO, ESTAS SON NUESTRAS SUGERENCIAS:</p>
+            <img src="img/novios.svg" width="150px" height="50px">
+        </div>
+
+        <div class="contenedor">
+            <img src="img/confirmacion.svg" style="text-align: center;" width="100%">
+            <!-- <div class="invitados">
+                <h2>Catalina Sandoval</h2>
+                <h2>Catalina Sandoval</h2>
+                <h2>Catalina Sandoval</h2>
+                <h2>Catalina Sandoval</h2>
+            </div> -->
+            <div class="formulRespuesta">
+                
+                <form action="#" data-wow-delay="0.3s">
+                        <div class="row">
+                            <div class="col-xl-6 form-group">
+                                <h2>Invitados</h2>
+                                <div>
+                                    <input type="checkbox" id="catalina" name="catalina" />
+                                    <label for="catalina">Catalina Sandoval</label>
+                                </div>
+
+                                <div>
+                                    <input type="checkbox" id="nicolas" name="nicolas" />
+                                    <label for="nicolas">Nicolás Miño</label>
+                                </div>
+                            </div>
+                            <div class="col-xl-6 form-group">
+                                <h2>Confirmar asistencia</h2>
+                                
+                                <div>
+                                    <input type="radio" id="dewey" name="drone" value="dewey" />
+                                    <label for="dewey">Asistiré</label>
+                                </div>
+                                
+                                <div>
+                                    <input type="radio" id="louie" name="drone" value="louie" />
+                                    <label for="louie">No podré asistir</label>
+                                </div>
+                            </div>
+                            <div class="col-xl-6 form-group">
+                                <textarea class="form-control  style2" name="mensaje" cols="20" rows="4" aria-required="true" aria-invalid="false" placeholder="Mensaje"></textarea>
+                                <i class="fas fa-pencil-alt"></i>
+                            </div>
+                            <div class="col-xl-12 text-center">
+                                <button type="submit" class="vs-btn style2">Enviar<i class="fas fa-paper-plane"></i></button>
+                            </div>
+                        </div>
+                </form>   
+            </div>
+            
+            
+        </div>
+        
+    </section>
+    <!-- Scroll To Top -->
+    <a href="#" class="scrollToTop scroll-bottom  style2"><i class="fas fa-arrow-alt-up"></i></a>
+    <!--==============================
+        All Js File
+    ============================== -->
+    <!-- Jquery -->
+    <script src="assets/js/vendor/jquery-3.6.0.min.js"></script>
+    <!-- Slick Slider -->
+    <script src="assets/js/slick.min.js"></script>
+    <!-- <script src="assets/js/app.min.js"></script> -->
+    <!-- Layerslider -->
+    <script src="assets/js/layerslider.utils.js"></script>
+    <script src="assets/js/layerslider.transitions.js"></script>
+    <script src="assets/js/layerslider.kreaturamedia.jquery.js"></script>
+    <!-- Bootstrap -->
+    <script src="assets/js/bootstrap.min.js"></script>
+    <!-- jQuery Datepicker -->
+    <script src="assets/js/jquery.datetimepicker.min.js"></script>
+    <!-- Magnific Popup -->
+    <script src="assets/js/jquery.magnific-popup.min.js"></script>
+    <!-- Isotope Filter -->
+    <script src="assets/js/imagesloaded.pkgd.min.js"></script>
+    <script src="assets/js/isotope.pkgd.min.js"></script>
+    <!-- Parallax Scroll -->
+    <script src="assets/js/universal-parallax.min.js"></script>
+    <!-- WOW Animation -->
+    <script src="assets/js/wow.min.js"></script>
+    <!-- Custom Carousel -->
+    <script src="assets/js/vscustom-carousel.min.js"></script>
+    <!-- Form Js -->
+    <script src="assets/js/ajax-mail.js"></script>
+    <!-- Main Js File -->
+    <script src="assets/js/main.js"></script>
+
+</body>
+
+</html>
