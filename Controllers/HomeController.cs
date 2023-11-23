@@ -9,14 +9,12 @@ namespace Invitacion.Controllers
     public class HomeController : Controller
     {
         private readonly Email email;
-        private readonly InviDao inviDao;
         private readonly IActionContextAccessor _actionContextAccessor;
         private readonly IUrlHelperFactory _urlHelperFactory;
 
         public HomeController(IUrlHelperFactory urlHelperFactory, IActionContextAccessor actionContextAccessor)
         {
             email = new Email();
-			inviDao = new InviDao();
 			_urlHelperFactory = urlHelperFactory;
             _actionContextAccessor = actionContextAccessor;
         }
@@ -65,11 +63,6 @@ namespace Invitacion.Controllers
             else if (codigo == "EAYA")
             {
                 ViewBag.Primero = "Fernanda Salas";
-                cantidad = 1;
-            }
-            else if (codigo == "VGCX")
-            {
-                ViewBag.Primero = "Valentina Zapata";
                 cantidad = 1;
             }
             else if (codigo == "SAVS")
@@ -142,8 +135,14 @@ namespace Invitacion.Controllers
                 ViewBag.Primero = "Catalina Cabrera";
                 cantidad = 1;
             }
-            // DOS INVITADO
-            else if (codigo == "RYFF")
+			// DOS INVITADO
+			else if (codigo == "VGCX")
+			{
+				ViewBag.Primero = "Valentina Zapata";
+				ViewBag.Segundo = "Benjamin Ciapa";
+				cantidad = 2;
+			}
+			else if (codigo == "RYFF")
             {
                 ViewBag.Primero = "Sebastián Fernández R.";
                 ViewBag.Segundo = "Natalia Osores C.";
@@ -304,7 +303,6 @@ namespace Invitacion.Controllers
                 cantidad = "3";
             }
 
-            //inviDao.InsertarLog(primero + " - " + segundo + " - " + tercero + " - " + cuarto, confirmacion, mensaje);
             email.EnviarEmail(primero, segundo, tercero, cuarto, confirmacion, mensaje, int.Parse(cantidad));
 
             if(confirmacion == "NoAsistire")
