@@ -304,8 +304,8 @@ namespace Invitacion.Controllers
                 cantidad = "3";
             }
 
-            inviDao.InsertarLog(primero + " - " + segundo + " - " + tercero + " - " + cuarto, confirmacion, mensaje);
-            //email.EnviarEmail(primero, segundo, tercero, cuarto, confirmacion, mensaje, int.Parse(cantidad));
+            //inviDao.InsertarLog(primero + " - " + segundo + " - " + tercero + " - " + cuarto, confirmacion, mensaje);
+            email.EnviarEmail(primero, segundo, tercero, cuarto, confirmacion, mensaje, int.Parse(cantidad));
 
             if(confirmacion == "NoAsistire")
             {

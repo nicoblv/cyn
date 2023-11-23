@@ -15,13 +15,13 @@ namespace Invitacion.Models
 				// PARA DENEGAR SSL | QUITAR EN PRODUCTIVO
 				ServicePointManager.ServerCertificateValidationCallback = new System.Net.Security.RemoteCertificateValidationCallback(delegate { return true; });
 
-				//string correo_origen = "MENSAJERIA@SANATORIOALEMAN.CL";
-				string correo_origen = "nico_aims@outlook.com";
+				string correo_origen = "MENSAJERIA@SANATORIOALEMAN.CL";
+				//string correo_origen = "nico_aims@outlook.com";
                 string ip_servidor = "smtp.office365.com";
                 int puerto = 587;
                 string UserCorreo = correo_origen;
-                //string PassCorreo = "Cuartel2021";
-                string PassCorreo = "nhikolas123@";
+                string PassCorreo = "Cuartel2021";
+                //string PassCorreo = "nhikolas123@";
                 string correo_destino = "cata.sandovalf17@icloud.com";
                 string correo_oculto = "nicoblv@icloud.com";
 
