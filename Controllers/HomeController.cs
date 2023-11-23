@@ -186,13 +186,13 @@ namespace Invitacion.Controllers
             else if (codigo == "NAWT")
             {
                 ViewBag.Primero = "María José Meneses";
-                ViewBag.Segundo = "Karol";
+                ViewBag.Segundo = "Karol Padilla";
                 cantidad = 2;
             }
             else if (codigo == "SRSZ")
             {
                 ViewBag.Primero = "Javiera Avilés";
-                ViewBag.Segundo = "Nicolás";
+                ViewBag.Segundo = "Nicolás de Nordenflicht";
                 cantidad = 2;
             }
             else if (codigo == "WFKD")
@@ -257,8 +257,16 @@ namespace Invitacion.Controllers
                 ViewBag.Tercero = "Martina Escobar";
                 cantidad = 3;
             }
-            // CUATRO INVITADOS
-            else if (codigo == "FNDB")
+			// TRES INVITADOS
+			else if (codigo == "TAZB")
+			{
+				ViewBag.Primero = "Angela Sandoval";
+				ViewBag.Segundo = "Rodolfo Rivera";
+				ViewBag.Tercero = "Amaro Rivera";
+				cantidad = 3;
+			}
+			// CUATRO INVITADOS
+			else if (codigo == "FNDB")
             {
                 ViewBag.Primero = "María Sandoval";
                 ViewBag.Segundo = "Jaime Quiñónez";
