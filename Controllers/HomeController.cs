@@ -26,12 +26,13 @@ namespace Invitacion.Controllers
             ViewBag.ReturnUrl = returnUrl;
             return View();
         }
-
+        [Route("Invitacion")]
         [HttpPost]
         public IActionResult Invitacion()
         {
-			string codigo = string.IsNullOrEmpty(HttpContext.Request.Form["inputCode"]) ? "" : HttpContext.Request.Form["inputCode"];
+			string code = string.IsNullOrEmpty(HttpContext.Request.Form["inputCode"]) ? "CYN" : HttpContext.Request.Form["inputCode"];
             int cantidad = 0;
+            string codigo = code.ToUpper();
 
             // UN INVITADO
             if (codigo == "WZFY")
@@ -131,7 +132,7 @@ namespace Invitacion.Controllers
             }
             else if (codigo == "QTGJ")
             {
-                ViewBag.Primero = "Bárbara Aviles";
+                ViewBag.Primero = "Bárbara Avilés";
                 cantidad = 1;
             }
             else if (codigo == "EAYG")
@@ -190,7 +191,7 @@ namespace Invitacion.Controllers
             }
             else if (codigo == "SRSZ")
             {
-                ViewBag.Primero = "Javiera Aviles";
+                ViewBag.Primero = "Javiera Avilés";
                 ViewBag.Segundo = "Nicolás";
                 cantidad = 2;
             }
@@ -248,7 +249,6 @@ namespace Invitacion.Controllers
                 ViewBag.Segundo = "Rumar Arias S.";
                 cantidad = 2;
             }
-
             // TRES INVITADOS
             else if (codigo == "EXXG")
             {
@@ -257,17 +257,6 @@ namespace Invitacion.Controllers
                 ViewBag.Tercero = "Martina Escobar";
                 cantidad = 3;
             }
-
-            else if (codigo == "ABC")
-            {
-				ViewBag.Primero = "Nicolás Miño";
-                ViewBag.PrimeroFor = "nicolas";
-                ViewBag.Segundo = "Catalina Sandoval";
-                ViewBag.SegundoFor = "catalina";
-                ViewBag.Tercero = "Cata Nico";
-                ViewBag.TerceroFor = "catanico";
-                cantidad = 3;
-			}
             // CUATRO INVITADOS
             else if (codigo == "FNDB")
             {
@@ -277,31 +266,13 @@ namespace Invitacion.Controllers
                 ViewBag.Cuarto = "Alonso Quiñónez";
                 cantidad = 4;
             }
-
-
-
-
-            else if (codigo == "DFG")
+            else if(codigo == "CYN")
             {
-				ViewBag.Primero = "Catalina Sandoval";
-                ViewBag.PrimeroFor = "catanico";
-                ViewBag.Segundo = "Nicolás Miño";
-                ViewBag.SegundoFor = "nicolas";
-                cantidad = 2;
-			}
-            else if (codigo == "DAA")
-            {
-                ViewBag.Primero = "Catalina Sandoval";
-                ViewBag.Segundo = "Nicolás Miño";
-                ViewBag.Tercero = "Cata Nico";
-                ViewBag.Cuarto = "Cata Nico";
-                ViewBag.Quinto = "Cata Nico";
-                ViewBag.Sexto = "Cata Nico";
-                cantidad = 6;
+                return RedirectToAction("Error");
             }
             else
             {
-				cantidad = 0;
+                return RedirectToAction("Error");
 			}
 
             ViewBag.Cantidad = cantidad;
@@ -323,15 +294,20 @@ namespace Invitacion.Controllers
             {
                 cantidad = "3";
             }
-
-
-
-
             email.EnviarEmail(primero, segundo, tercero, cuarto, confirmacion, mensaje, int.Parse(cantidad));
-            
 
-
-            return Json(new { data = true, responseText = "Usuario Válido" });
+            if(confirmacion == "NoAsistire")
+            {
+				return Json(new { data = true, responseText = "Lamentamos que no puedas asistir." });
+			}
+            return Json(new { data = true, responseText = "Te esperamos!!" });
+        }
+        public IActionResult Error()
+        {
+			var urlHelper = _urlHelperFactory.GetUrlHelper(_actionContextAccessor.ActionContext);
+			var returnUrl = urlHelper.Action("Invitacion", "Home", null, Request.Scheme);
+			ViewBag.ReturnUrl = returnUrl;
+			return View();
         }
     }
 }

@@ -13,9 +13,6 @@
     <meta name="robots" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-    <!--==============================
-       Google Web Fonts
-    ============================== -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet">
@@ -26,9 +23,6 @@
     <link rel="shortcut icon" href="~/favicon.ico" type="image/x-icon">
     <link rel="icon" href="~/favicon.ico" type="image/x-icon">
 
-    <!--==============================
-        All CSS File
-    ============================== -->
     <!-- Bootstrap -->
     <link rel="stylesheet" href="~/assets/css/bootstrap.min.css">
     <!-- <link rel="stylesheet" href="assets/css/app.min.css"> -->
@@ -112,7 +106,7 @@
     <![endif]-->
     <div class="preloader  ">
         <button class="vs-btn preloaderCls">Cancelar carga </button>
-        <p>Dale PLAY</p>
+        <h2>Dale PLAY!!</h2>
         <audio id="player" autoplay loop controls>
             <source src="~/perfect.mp3" type="audio/mp3">
             <source src="~/perfect.ogg" type="audio/ogg">
@@ -121,8 +115,8 @@
             <img src="~/heart.svg" vwidth="88px" height="108px" class="svg-icon" />
         </div>
     </div>
-    <img src="~/img/home.svg" width="100%">
-    <img src="~/img/noscasamos.svg" width="100%">
+    <img src="~/img/homess.svg" width="100%">
+    <img src="~/img/noscasamoss.svg" width="100%">
     <section class="hero-layout5 vs-hero-wrapper position-relative" style="padding-top: -40%;">
         <div class="vs-hero-carousel" data-height="1080" data-container="1900" data-slidertype="responsive" data-maxratio="3" style="padding-top: -50%;">
             <div class="ls-slide" data-ls="duration:3000; transition2d:5; kenburnsscale:1.2;">
@@ -217,6 +211,26 @@
                                     <label for="tercero">@ViewBag.Tercero</label>
                                 </div>
                             }
+                            else if (ViewBag.Cantidad == 4)
+                            {
+                                <div>
+                                    <input type="checkbox" id="primero" name="primero" value="@ViewBag.Primero" />
+                                    <label for="primero">@ViewBag.Primero</label>
+                                </div>
+
+                                <div>
+                                    <input type="checkbox" id="segundo" name="segundo" value="@ViewBag.Segundo" />
+                                    <label for="segundo">@ViewBag.Segundo</label>
+                                </div>
+                                <div>
+                                    <input type="checkbox" id="tercero" name="tercero" value="@ViewBag.Tercero" />
+                                    <label for="tercero">@ViewBag.Tercero</label>
+                                </div>
+                                <div>
+                                    <input type="checkbox" id="cuarto" name="cuarto" value="@ViewBag.Cuarto" />
+                                    <label for="cuarto">@ViewBag.Cuarto</label>
+                                </div>
+                            }
                             else if (ViewBag.Cantidad == 6)
                             {
                                 <div>
@@ -280,7 +294,6 @@
     <!--==============================
         All Js File
     ============================== -->
-    @*<script src="~/js/site.js"></script>*@
     <!-- Jquery -->
     <script src="~/assets/js/vendor/jquery-3.6.0.min.js"></script>
     <!-- Slick Slider -->
@@ -305,8 +318,6 @@
     <script src="~/assets/js/wow.min.js"></script>
     <!-- Custom Carousel -->
     <script src="~/assets/js/vscustom-carousel.min.js"></script>
-    <!-- Form Js -->
-    <script src="~/assets/js/ajax-mail.js"></script>
     <!-- Main Js File -->
     <script src="~/assets/js/main.js"></script>
 
@@ -315,6 +326,7 @@
             var check1;
             var check2;
             var check3;
+            var check4;
             var cant = "@ViewBag.Cantidad";
             let confir = $('input[name="inputConfirmacion"]:checked').val();
 
@@ -330,10 +342,16 @@
                 check2 = $('input:checkbox[name="segundo"]:checked').val();
                 check3 = $('input:checkbox[name="tercero"]:checked').val();
             }
+            else if (@ViewBag.Cantidad == 4){
+                check1 = $('input:checkbox[name="primero"]:checked').val();
+                check2 = $('input:checkbox[name="segundo"]:checked').val();
+                check3 = $('input:checkbox[name="tercero"]:checked').val();
+                check4 = $('input:checkbox[name="cuarto"]:checked').val();
+            }
 
             $.ajax({
                 url: '@Url.Action("Validar","Home")',
-                data: { mensaje: $("#inputMensaje").val(), confirmacion: confir, primero: check1, segundo: check2, tercero: check3, cantidad: cant },
+                data: { mensaje: $("#inputMensaje").val(), confirmacion: confir, primero: check1, segundo: check2, tercero: check3, cuarto: check4, cantidad: cant },
                 type: "GET",
                 dataType: "json",
                 contentType: "application/json; charset=utf-8",
