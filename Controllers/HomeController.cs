@@ -218,6 +218,36 @@ namespace Invitacion.Controllers
                 ViewBag.Segundo = "Yessica Toledo";
                 cantidad = 2;
             }
+            else if (codigo == "PQDE")
+            {
+                ViewBag.Primero = "Thaís Espinoza";
+                ViewBag.Segundo = "Italo Reyes";
+                cantidad = 2;
+            }
+            else if (codigo == "WRCY")
+            {
+                ViewBag.Primero = "Janelore Muñoz";
+                ViewBag.Segundo = "Rodrigo Concha";
+                cantidad = 2;
+            }
+            else if (codigo == "WRCY")
+            {
+                ViewBag.Primero = "Janelore Muñoz";
+                ViewBag.Segundo = "Rodrigo Concha";
+                cantidad = 2;
+            }
+            else if (codigo == "BCXK")
+            {
+                ViewBag.Primero = "Fernanda Salvatierra G.";
+                ViewBag.Segundo = "Thomas González M.";
+                cantidad = 2;
+            }
+            else if (codigo == "FQXU")
+            {
+                ViewBag.Primero = "Alexis Obando V.";
+                ViewBag.Segundo = "Rumar Arias S.";
+                cantidad = 2;
+            }
 
             // TRES INVITADOS
             else if (codigo == "EXXG")
@@ -238,6 +268,19 @@ namespace Invitacion.Controllers
                 ViewBag.TerceroFor = "catanico";
                 cantidad = 3;
 			}
+            // CUATRO INVITADOS
+            else if (codigo == "FNDB")
+            {
+                ViewBag.Primero = "María Sandoval";
+                ViewBag.Segundo = "Jaime Quiñónez";
+                ViewBag.Tercero = "Ignacia Quiñónez";
+                ViewBag.Cuarto = "Alonso Quiñónez";
+                cantidad = 4;
+            }
+
+
+
+
             else if (codigo == "DFG")
             {
 				ViewBag.Primero = "Catalina Sandoval";
