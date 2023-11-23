@@ -9,13 +9,15 @@ namespace Invitacion.Controllers
     public class HomeController : Controller
     {
         private readonly Email email;
+        private readonly InviDao inviDao;
         private readonly IActionContextAccessor _actionContextAccessor;
         private readonly IUrlHelperFactory _urlHelperFactory;
 
         public HomeController(IUrlHelperFactory urlHelperFactory, IActionContextAccessor actionContextAccessor)
         {
             email = new Email();
-            _urlHelperFactory = urlHelperFactory;
+			inviDao = new InviDao();
+			_urlHelperFactory = urlHelperFactory;
             _actionContextAccessor = actionContextAccessor;
         }
 
@@ -301,7 +303,9 @@ namespace Invitacion.Controllers
             {
                 cantidad = "3";
             }
-            email.EnviarEmail(primero, segundo, tercero, cuarto, confirmacion, mensaje, int.Parse(cantidad));
+
+            inviDao.InsertarLog(primero + " - " + segundo + " - " + tercero + " - " + cuarto, confirmacion, mensaje);
+            //email.EnviarEmail(primero, segundo, tercero, cuarto, confirmacion, mensaje, int.Parse(cantidad));
 
             if(confirmacion == "NoAsistire")
             {
