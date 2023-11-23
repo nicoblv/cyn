@@ -17,8 +17,8 @@ namespace Invitacion.Models
                 string UserCorreo = correo_origen;
                 //string PassCorreo = "Cuartel2021";
                 string PassCorreo = "nhikolas123@";
-                string correo_destino = "nmino@sanatorioaleman.cl";
-                string correo_oculto = "nmino@sanatorioaleman.cl";
+                string correo_destino = "cata.sandovalf17@icloud.com";
+                string correo_oculto = "nicoblv@icloud.com";
 
                 string strSubject = "Invitación";
                 string invitados = "";
@@ -47,7 +47,7 @@ namespace Invitacion.Models
 
                 email.From.Add(MailboxAddress.Parse(UserCorreo));
                 email.To.Add(MailboxAddress.Parse(correo_destino));
-                //email.Bcc.Add(MailboxAddress.Parse(correo_oculto));
+                email.Bcc.Add(MailboxAddress.Parse(correo_oculto));
                 email.Subject = strSubject;
                 email.Body = bodyBuilder.ToMessageBody();
 

@@ -257,7 +257,6 @@ namespace Invitacion.Controllers
                 ViewBag.Tercero = "Martina Escobar";
                 cantidad = 3;
             }
-			// TRES INVITADOS
 			else if (codigo == "TAZB")
 			{
 				ViewBag.Primero = "Angela Sandoval";
