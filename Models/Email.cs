@@ -1,5 +1,6 @@
 ﻿using MimeKit;
 using MailKit.Net.Smtp;
+using System.Net;
 
 namespace Invitacion.Models
 {
@@ -10,8 +11,12 @@ namespace Invitacion.Models
             try
             {
                 var email = new MimeMessage();
-                //string correo_origen = "MENSAJERIA@SANATORIOALEMAN.CL";
-                string correo_origen = "nico_aims@outlook.com";
+
+				// PARA DENEGAR SSL | QUITAR EN PRODUCTIVO
+				ServicePointManager.ServerCertificateValidationCallback = new System.Net.Security.RemoteCertificateValidationCallback(delegate { return true; });
+
+				//string correo_origen = "MENSAJERIA@SANATORIOALEMAN.CL";
+				string correo_origen = "nico_aims@outlook.com";
                 string ip_servidor = "smtp.office365.com";
                 int puerto = 587;
                 string UserCorreo = correo_origen;
