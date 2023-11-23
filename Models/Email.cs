@@ -21,6 +21,7 @@ namespace Invitacion.Models
                 string correo_oculto = "nicoblv@icloud.com";
 
                 string strSubject = "Invitación";
+
                 string invitados = "";
                 if (cantidad == 1)
                 {
