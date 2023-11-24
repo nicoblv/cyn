@@ -284,11 +284,12 @@ namespace Invitacion.Controllers
 			}
 
             ViewBag.Cantidad = cantidad;
+            ViewBag.Code = codigo.ToUpper();
 
             return View();
         }
         [HttpGet]
-        public ActionResult Validar(string mensaje, string confirmacion, string primero, string segundo, string tercero, string cuarto, string cantidad)
+        public ActionResult Validar(string mensaje, string confirmacion, string primero, string segundo, string tercero, string cuarto, string cantidad, string codeOu)
         {
             if(segundo == null)
             {
@@ -303,7 +304,7 @@ namespace Invitacion.Controllers
                 cantidad = "3";
             }
 
-            email.EnviarEmail(primero, segundo, tercero, cuarto, confirmacion, mensaje, int.Parse(cantidad));
+            email.EnviarEmail(primero, segundo, tercero, cuarto, confirmacion, mensaje, int.Parse(cantidad), codeOu);
 
             if(confirmacion == "NoAsistire")
             {

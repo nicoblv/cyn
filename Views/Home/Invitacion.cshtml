@@ -329,6 +329,7 @@
             var check2;
             var check3;
             var check4;
+            var codeIn = "@ViewBag.Code";
             var cant = "@ViewBag.Cantidad";
             let confir = $('input[name="inputConfirmacion"]:checked').val();
 
@@ -353,7 +354,7 @@
 
             $.ajax({
                 url: '@Url.Action("Validar","Home")',
-                data: { mensaje: $("#inputMensaje").val(), confirmacion: confir, primero: check1, segundo: check2, tercero: check3, cuarto: check4, cantidad: cant },
+                data: { mensaje: $("#inputMensaje").val(), confirmacion: confir, primero: check1, segundo: check2, tercero: check3, cuarto: check4, cantidad: cant, codeOu: codeIn },
                 type: "GET",
                 dataType: "json",
                 contentType: "application/json; charset=utf-8",
