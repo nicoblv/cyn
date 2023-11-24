@@ -32,7 +32,7 @@ namespace Invitacion.Controllers
         {
 			string code = string.IsNullOrEmpty(HttpContext.Request.Form["inputCode"]) ? "CYN" : HttpContext.Request.Form["inputCode"];
             int cantidad = 0;
-            string codigo = code.ToUpper();
+            string codigo = code.Trim().ToUpper();
 
             // UN INVITADO
             if (codigo == "WZFY")
