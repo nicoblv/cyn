@@ -55,6 +55,19 @@
             left: 50%;
             transform: translate(-50%, -50%);
         }
+        .centradoGracias {
+            position: absolute;
+            top: 53%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        .centradoGracias h2{
+                text-align: center;
+                color: black;
+                font-weight: bold;
+                font-family: 'Old Standard TT', serif;
+        }
 
         .final {
             position: absolute;
@@ -171,122 +184,134 @@
         </div>
 
         <div class="contenedor">
-            <img src="~/img/confirmacion.svg" style="text-align: center;" width="100%">
-            <div class="formulRespuesta" id="formulRespuesta">
-                <form data-wow-delay="0.3s">
-                    <div class="row">
-                        <div class="col-xl-6 form-group">
-                            <h2>Invitados</h2>
+            @if(ViewBag.Confirmado == 0)
+            {
+                <img src="~/img/confirmacion.svg" style="text-align: center;" width="100%">
+                <div class="formulRespuesta" id="formulRespuesta">
+                    <form data-wow-delay="0.3s">
+                        <div class="row">
+                            <div class="col-xl-6 form-group">
+                                <h2>Invitados</h2>
 
-                            @if (ViewBag.Cantidad == 1)
-                            {
-                                <div>
-                                    <input type="checkbox" id="primero" name="primero" value="@ViewBag.Primero" />
-                                    <label for="primero">@ViewBag.Primero</label>
-                                </div>
-                            }
-                            else if (ViewBag.Cantidad == 2)
-                            {
-                                <div>
-                                    <input type="checkbox" id="primero" name="primero" value="@ViewBag.Primero" />
-                                    <label for="primero">@ViewBag.Primero</label>
-                                </div>
+                                @if (ViewBag.Cantidad == 1)
+                                {
+                                    <div>
+                                        <input type="checkbox" id="primero" name="primero" value="@ViewBag.Primero" />
+                                        <label for="primero">@ViewBag.Primero</label>
+                                    </div>
+                                }
+                                else if (ViewBag.Cantidad == 2)
+                                {
+                                    <div>
+                                        <input type="checkbox" id="primero" name="primero" value="@ViewBag.Primero" />
+                                        <label for="primero">@ViewBag.Primero</label>
+                                    </div>
 
-                                <div>
-                                    <input type="checkbox" id="segundo" name="segundo" value="@ViewBag.Segundo" />
-                                    <label for="segundo">@ViewBag.Segundo</label>
-                                </div>
-                            }
-                            else if (ViewBag.Cantidad == 3)
-                            {
-                                <div>
-                                    <input type="checkbox" id="primero" name="primero" value="@ViewBag.Primero" />
-                                    <label for="primero">@ViewBag.Primero</label>
-                                </div>
+                                    <div>
+                                        <input type="checkbox" id="segundo" name="segundo" value="@ViewBag.Segundo" />
+                                        <label for="segundo">@ViewBag.Segundo</label>
+                                    </div>
+                                }
+                                else if (ViewBag.Cantidad == 3)
+                                {
+                                    <div>
+                                        <input type="checkbox" id="primero" name="primero" value="@ViewBag.Primero" />
+                                        <label for="primero">@ViewBag.Primero</label>
+                                    </div>
 
-                                <div>
-                                    <input type="checkbox" id="segundo" name="segundo" value="@ViewBag.Segundo" />
-                                    <label for="segundo">@ViewBag.Segundo</label>
-                                </div>
-                                <div>
-                                    <input type="checkbox" id="tercero" name="tercero" value="@ViewBag.Tercero" />
-                                    <label for="tercero">@ViewBag.Tercero</label>
-                                </div>
-                            }
-                            else if (ViewBag.Cantidad == 4)
-                            {
-                                <div>
-                                    <input type="checkbox" id="primero" name="primero" value="@ViewBag.Primero" />
-                                    <label for="primero">@ViewBag.Primero</label>
-                                </div>
+                                    <div>
+                                        <input type="checkbox" id="segundo" name="segundo" value="@ViewBag.Segundo" />
+                                        <label for="segundo">@ViewBag.Segundo</label>
+                                    </div>
+                                    <div>
+                                        <input type="checkbox" id="tercero" name="tercero" value="@ViewBag.Tercero" />
+                                        <label for="tercero">@ViewBag.Tercero</label>
+                                    </div>
+                                }
+                                else if (ViewBag.Cantidad == 4)
+                                {
+                                    <div>
+                                        <input type="checkbox" id="primero" name="primero" value="@ViewBag.Primero" />
+                                        <label for="primero">@ViewBag.Primero</label>
+                                    </div>
 
-                                <div>
-                                    <input type="checkbox" id="segundo" name="segundo" value="@ViewBag.Segundo" />
-                                    <label for="segundo">@ViewBag.Segundo</label>
-                                </div>
-                                <div>
-                                    <input type="checkbox" id="tercero" name="tercero" value="@ViewBag.Tercero" />
-                                    <label for="tercero">@ViewBag.Tercero</label>
-                                </div>
-                                <div>
-                                    <input type="checkbox" id="cuarto" name="cuarto" value="@ViewBag.Cuarto" />
-                                    <label for="cuarto">@ViewBag.Cuarto</label>
-                                </div>
-                            }
-                            else if (ViewBag.Cantidad == 6)
-                            {
-                                <div>
-                                    <input type="checkbox" id="primero" name="primero" value="@ViewBag.Primero" />
-                                    <label for="primero">@ViewBag.Primero</label>
-                                </div>
+                                    <div>
+                                        <input type="checkbox" id="segundo" name="segundo" value="@ViewBag.Segundo" />
+                                        <label for="segundo">@ViewBag.Segundo</label>
+                                    </div>
+                                    <div>
+                                        <input type="checkbox" id="tercero" name="tercero" value="@ViewBag.Tercero" />
+                                        <label for="tercero">@ViewBag.Tercero</label>
+                                    </div>
+                                    <div>
+                                        <input type="checkbox" id="cuarto" name="cuarto" value="@ViewBag.Cuarto" />
+                                        <label for="cuarto">@ViewBag.Cuarto</label>
+                                    </div>
+                                }
+                                else if (ViewBag.Cantidad == 6)
+                                {
+                                    <div>
+                                        <input type="checkbox" id="primero" name="primero" value="@ViewBag.Primero" />
+                                        <label for="primero">@ViewBag.Primero</label>
+                                    </div>
 
-                                <div>
-                                    <input type="checkbox" id="segundo" name="segundo" value="@ViewBag.Segundo" />
-                                    <label for="segundo">@ViewBag.Segundo</label>
-                                </div>
-                                <div>
-                                    <input type="checkbox" id="tercero" name="tercero" value="@ViewBag.Tercero" />
-                                    <label for="tercero">@ViewBag.Tercero</label>
-                                </div>
-                                <div>
-                                    <input type="checkbox" id="cuarto" name="cuarto" value="@ViewBag.Cuarto" />
-                                    <label for="cuarto">@ViewBag.Cuarto</label>
-                                </div>
+                                    <div>
+                                        <input type="checkbox" id="segundo" name="segundo" value="@ViewBag.Segundo" />
+                                        <label for="segundo">@ViewBag.Segundo</label>
+                                    </div>
+                                    <div>
+                                        <input type="checkbox" id="tercero" name="tercero" value="@ViewBag.Tercero" />
+                                        <label for="tercero">@ViewBag.Tercero</label>
+                                    </div>
+                                    <div>
+                                        <input type="checkbox" id="cuarto" name="cuarto" value="@ViewBag.Cuarto" />
+                                        <label for="cuarto">@ViewBag.Cuarto</label>
+                                    </div>
 
-                                <div>
-                                    <input type="checkbox" id="quinto" name="quinto" value="@ViewBag.Quinto" />
-                                    <label for="quinto">@ViewBag.Quinto</label>
-                                </div>
-                                <div>
-                                    <input type="checkbox" id="sexto" name="sexto" value="@ViewBag.Sexto" />
-                                    <label for="sexto">@ViewBag.Sexto</label>
-                                </div>
-                            }
-                        </div>
-                        <div class="col-xl-6 form-group">
-                            <h2>Confirmar asistencia</h2>
-
-                            <div>
-                                <input type="radio" id="inputAsistire" name="inputConfirmacion" value="Asistire" />
-                                <label for="inputAsistire">Asistiré</label>
+                                    <div>
+                                        <input type="checkbox" id="quinto" name="quinto" value="@ViewBag.Quinto" />
+                                        <label for="quinto">@ViewBag.Quinto</label>
+                                    </div>
+                                    <div>
+                                        <input type="checkbox" id="sexto" name="sexto" value="@ViewBag.Sexto" />
+                                        <label for="sexto">@ViewBag.Sexto</label>
+                                    </div>
+                                }
                             </div>
+                            <div class="col-xl-6 form-group">
+                                <h2>Confirmar asistencia</h2>
 
-                            <div>
-                                <input type="radio" id="inputNoAsistire" name="inputConfirmacion" value="NoAsistire" />
-                                <label for="inputNoAsistire">No podré asistir</label>
+                                <div>
+                                    <input type="radio" id="inputAsistire" name="inputConfirmacion" value="Asistire" />
+                                    <label for="inputAsistire">Asistiré</label>
+                                </div>
+
+                                <div>
+                                    <input type="radio" id="inputNoAsistire" name="inputConfirmacion" value="NoAsistire" />
+                                    <label for="inputNoAsistire">No podré asistir</label>
+                                </div>
+                            </div>
+                            <div class="col-xl-6 form-group">
+                                <textarea class="form-control  style2" id="inputMensaje" name="inputMensaje" cols="20" rows="4" aria-required="true" aria-invalid="false" placeholder="Mensaje"></textarea>
+                                <i class="fas fa-pencil-alt"></i>
+                            </div>
+                            <div class="col-xl-12 text-center">
+                                <button type="button" name="btnEnviar" onclick="myFunction()" class="vs-btn style2">Enviar<i class="fas fa-paper-plane"></i></button>
                             </div>
                         </div>
-                        <div class="col-xl-6 form-group">
-                            <textarea class="form-control  style2" id="inputMensaje" name="inputMensaje" cols="20" rows="4" aria-required="true" aria-invalid="false" placeholder="Mensaje"></textarea>
-                            <i class="fas fa-pencil-alt"></i>
-                        </div>
-                        <div class="col-xl-12 text-center">
-                            <button type="button" name="btnEnviar" onclick="myFunction()" class="vs-btn style2">Enviar<i class="fas fa-paper-plane"></i></button>
-                        </div>
-                    </div>
-                </form>
-            </div>
-
+                    </form>
+                </div>
+            }
+            else
+            {
+                <img src="~/img/blanca.svg" style="text-align: center;" width="100%">
+                <div class="centradoGracias">
+                    <h2>LA LISTA DE NOVIOS PUEDES VISUALIZARLA DANDOLE CLICK AL CODIGO DE NOVIOS.</h2>
+                    <a href="https://club.noviosparis.cl/home/search-couple/18711702" target="_blank">
+                        <img src="~/img/codigo.svg">
+                    </a>
+                </div>
+            }
 
         </div>
 
