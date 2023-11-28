@@ -301,8 +301,8 @@ namespace Invitacion.Controllers
             {
                 ViewBag.Primero = "Patricia Sandoval";
                 ViewBag.Segundo = "Jorge Avilés";
-                ViewBag.Segundo = "José Tomás Avilés S.";
-                cantidad = 2;
+                ViewBag.Tercero = "José Tomás Avilés S.";
+                cantidad = 3;
             }
             else if (codigo == "EXXG")
             {
