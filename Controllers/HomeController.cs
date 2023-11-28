@@ -281,6 +281,7 @@ namespace Invitacion.Controllers
                 ViewBag.Primero = "Antonella Hinojosa C.";
                 ViewBag.Segundo = "Lucas Cisternas A.";
                 cantidad = 2;
+                confirmado = 1;
             }
             else if (codigo == "CYMG")
             {
@@ -294,13 +295,15 @@ namespace Invitacion.Controllers
                 ViewBag.Segundo = "Nicole Caamaño";
                 cantidad = 2;
             }
+
+            // TRES INVITADOS
             else if (codigo == "CNXZ")
             {
                 ViewBag.Primero = "Patricia Sandoval";
                 ViewBag.Segundo = "Jorge Avilés";
+                ViewBag.Segundo = "José Tomás Avilés S.";
                 cantidad = 2;
             }
-            // TRES INVITADOS
             else if (codigo == "EXXG")
             {
                 ViewBag.Primero = "Sandra Concha";
