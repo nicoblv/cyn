@@ -142,8 +142,13 @@ namespace Invitacion.Controllers
                 ViewBag.Primero = "Catalina Cabrera";
                 cantidad = 1;
             }
-			// DOS INVITADO
-			else if (codigo == "VGCX")
+            else if (codigo == "UTWU")
+            {
+                ViewBag.Primero = "Marta Concha";
+                cantidad = 1;
+            }
+            // DOS INVITADO
+            else if (codigo == "VGCX")
 			{
 				ViewBag.Primero = "Valentina Zapata";
 				ViewBag.Segundo = "Benjamin Ciapa";
@@ -295,7 +300,12 @@ namespace Invitacion.Controllers
                 ViewBag.Segundo = "Nicole Caamaño";
                 cantidad = 2;
             }
-
+            else if (codigo == "SREE")
+            {
+                ViewBag.Primero = "Claudia Suazo";
+                ViewBag.Segundo = "Eugenio González";
+                cantidad = 2;
+            }
             // TRES INVITADOS
             else if (codigo == "CNXZ")
             {
