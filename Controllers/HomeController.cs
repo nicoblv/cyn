@@ -56,6 +56,7 @@ namespace Invitacion.Controllers
             {
                 ViewBag.Primero = "Nicolás Arellano R.";
                 cantidad = 1;
+                confirmado = 1;
             }
             else if (codigo == "GQFH")
             {
@@ -89,6 +90,7 @@ namespace Invitacion.Controllers
             {
                 ViewBag.Primero = "René Espinoza";
                 cantidad = 1;
+                confirmado = 1;
             }
             else if (codigo == "UVSR")
             {
@@ -147,6 +149,16 @@ namespace Invitacion.Controllers
             else if (codigo == "UTWU")
             {
                 ViewBag.Primero = "Marta Concha";
+                cantidad = 1;
+            }
+            else if (codigo == "FEEH")
+            {
+                ViewBag.Primero = "Macarena Suazo";
+                cantidad = 1;
+            }
+            else if (codigo == "EYCG")
+            {
+                ViewBag.Primero = "Bastian Garate S.";
                 cantidad = 1;
             }
             // DOS INVITADO
@@ -300,12 +312,14 @@ namespace Invitacion.Controllers
                 ViewBag.Primero = "Diego González S.";
                 ViewBag.Segundo = "Rocío Gómez";
                 cantidad = 2;
+                confirmado = 1;
             }
             else if (codigo == "QANV")
             {
                 ViewBag.Primero = "Julián Valderrama";
                 ViewBag.Segundo = "Nicole Caamaño";
                 cantidad = 2;
+                confirmado = 1;
             }
             else if (codigo == "SREE")
             {
@@ -313,6 +327,24 @@ namespace Invitacion.Controllers
                 ViewBag.Segundo = "Eugenio González";
                 cantidad = 2;
                 confirmado = 1;
+            }
+            else if (codigo == "EXFR")
+            {
+                ViewBag.Primero = "María Suazo F.";
+                ViewBag.Segundo = "Pedro Ortíz";
+                cantidad = 2;
+            }
+            else if (codigo == "WSXD")
+            {
+                ViewBag.Primero = "Monica Suazo";
+                ViewBag.Segundo = "Miguel ";
+                cantidad = 2;
+            }
+            else if (codigo == "UJZW")
+            {
+                ViewBag.Primero = "Benjamín Henriquez R.";
+                ViewBag.Segundo = "Vianny Muñoz F.";
+                cantidad = 2;
             }
             // TRES INVITADOS
             else if (codigo == "RHMN")
@@ -337,6 +369,7 @@ namespace Invitacion.Controllers
                 ViewBag.Segundo = "Erwin Escobar";
                 ViewBag.Tercero = "Martina Escobar";
                 cantidad = 3;
+                confirmado = 1;
             }
 			else if (codigo == "TAZB")
 			{
@@ -344,7 +377,8 @@ namespace Invitacion.Controllers
 				ViewBag.Segundo = "Rodolfo Rivera";
 				ViewBag.Tercero = "Amaro Rivera";
 				cantidad = 3;
-			}
+                confirmado = 1;
+            }
 			// CUATRO INVITADOS
 			else if (codigo == "FNDB")
             {
@@ -354,14 +388,14 @@ namespace Invitacion.Controllers
                 ViewBag.Cuarto = "Alonso Quiñónez";
                 cantidad = 4;
             }
-            //else if (codigo == "ADCU")
-            //{
-            //    ViewBag.Primero = "Richard Cartes S.";
-            //    ViewBag.Segundo = "Mabel Vega H.";
-            //    ViewBag.Tercero = "Ignacia Quiñónez";
-            //    ViewBag.Cuarto = "Alonso Quiñónez";
-            //    cantidad = 4;
-            //}
+            else if (codigo == "ADCU")
+            {
+                ViewBag.Primero = "Richard Cartes S.";
+                ViewBag.Segundo = "Mabel Vega H.";
+                ViewBag.Tercero = "María Jesús Cartes V.";
+                ViewBag.Cuarto = "Agustin Cartes S.";
+                cantidad = 4;
+            }
             else if(codigo == "CYN")
             {
                 return RedirectToAction("Error");
