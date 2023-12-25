@@ -139,6 +139,7 @@ namespace Invitacion.Controllers
             {
                 ViewBag.Primero = "Bárbara Avilés";
                 cantidad = 1;
+                confirmado = 1;
 
             }
             else if (codigo == "EAYG")
@@ -239,12 +240,14 @@ namespace Invitacion.Controllers
                 ViewBag.Primero = "Pablo Albornoz S.";
                 ViewBag.Segundo = "Eliana Concha E.";
                 cantidad = 2;
+                confirmado = 1;
             }
             else if (codigo == "FSXW")
             {
                 ViewBag.Primero = "Jocelyn Cartes S.";
                 ViewBag.Segundo = "Jonathan Masaur P.";
                 cantidad = 2;
+                confirmado = 1;
             }
             else if (codigo == "HJDD")
             {
@@ -337,7 +340,7 @@ namespace Invitacion.Controllers
             else if (codigo == "WSXD")
             {
                 ViewBag.Primero = "Monica Suazo";
-                ViewBag.Segundo = "Miguel ";
+                ViewBag.Segundo = "Miguel Rodríguez";
                 cantidad = 2;
             }
             else if (codigo == "UJZW")
