@@ -41,6 +41,11 @@ namespace Invitacion.Controllers
                 ViewBag.Primero = "Anabel Miño C.";
                 cantidad = 1;
             }
+            else if (codigo == "EHLC")
+            {
+                ViewBag.Primero = "Edgard Salvatierra G.";
+                cantidad = 1;
+            }
             else if(codigo == "CRSX")
             {
                 ViewBag.Primero = "Emiliano Soto C.";

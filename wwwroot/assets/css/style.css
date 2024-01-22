@@ -1326,6 +1326,15 @@ textarea.form-control.is-invalid {
         font-family: 'Old Standard TT', serif;
         font-style: italic;
     }
+    .rectangulo h5 {
+        text-align: center;
+        color: black;
+        padding-top: 15px;
+        padding-bottom: 15px;
+        font-weight: bold;
+        font-family: 'Old Standard TT', serif;
+        font-style: italic;
+    }
 .button-container{
   display:inline-block;
   position:relative;
