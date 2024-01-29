@@ -401,8 +401,7 @@ namespace Invitacion.Controllers
                 ViewBag.Primero = "Richard Cartes S.";
                 ViewBag.Segundo = "Mabel Vega H.";
                 ViewBag.Tercero = "María Jesús Cartes V.";
-                ViewBag.Cuarto = "Agustin Cartes S.";
-                cantidad = 4;
+                cantidad = 3;
             }
             else if(codigo == "CYN")
             {
