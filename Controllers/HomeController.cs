@@ -347,11 +347,19 @@ namespace Invitacion.Controllers
                 ViewBag.Primero = "Monica Suazo";
                 ViewBag.Segundo = "Miguel Rodríguez";
                 cantidad = 2;
+                confirmado = 1;
             }
             else if (codigo == "UJZW")
             {
                 ViewBag.Primero = "Benjamín Henriquez R.";
                 ViewBag.Segundo = "Vianny Muñoz F.";
+                cantidad = 2;
+                confirmado = 1;
+            }
+            else if (codigo == "EKEM")
+            {
+                ViewBag.Primero = "Ignacia Quiñónez.";
+                ViewBag.Segundo = "Hamel Silva.";
                 cantidad = 2;
             }
             // TRES INVITADOS
