@@ -101,6 +101,7 @@ namespace Invitacion.Controllers
             {
                 ViewBag.Primero = "Nicolás Oliva";
                 cantidad = 1;
+                confirmado = 1;
             }
             else if (codigo == "RMCZ")
             {
@@ -341,6 +342,7 @@ namespace Invitacion.Controllers
                 ViewBag.Primero = "María Suazo F.";
                 ViewBag.Segundo = "Pedro Ortíz";
                 cantidad = 2;
+                confirmado = 1;
             }
             else if (codigo == "WSXD")
             {
@@ -361,6 +363,7 @@ namespace Invitacion.Controllers
                 ViewBag.Primero = "Ignacia Quiñónez.";
                 ViewBag.Segundo = "Hamel Silva.";
                 cantidad = 2;
+                confirmado = 1;
             }
             // TRES INVITADOS
             else if (codigo == "RHMN")
